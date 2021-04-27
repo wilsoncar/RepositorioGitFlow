@@ -11,6 +11,11 @@ class UserService {
       const user = await this.mongoDB.getUser(this.collection, id);
       return user || {};
   }
+
+  async updateUser(user, id) {
+    const usr = await this.mongoDB.updateUser(this.collection, id, user);
+    return usr || {};
+    }
   
 }
 

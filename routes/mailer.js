@@ -19,7 +19,7 @@ function mailerApi(app) {
             const payloadJWT = {
                 sub: randomNumber,
                 iat: moment().unix(),
-                exp: moment().add(3, 'm').unix()
+                exp: moment().add(10, 'm').unix()
             }
             const token = jwt.encode(payloadJWT, 'dog', 'HS256');
             const newUser = User;
@@ -27,9 +27,9 @@ function mailerApi(app) {
             newUser.name = data.name;
             newUser.lastname = data.lastname;
             newUser.mail = data.mail;
-            newUser.password = data.password;
+            newUser.password = data.pass;
             newUser.status = false;
-            newUser.token = token
+            newUser.token = token;
             email.subject = 'Registration Token';
             email.msg = `Your verification token is: ${randomNumber}`;
             email.email = newUser.mail;
