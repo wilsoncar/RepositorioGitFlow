@@ -1,4 +1,3 @@
-//Requerimos el paquete
 var nodemailer = require('nodemailer');
 const MongoLib = require('../lib/mongo');
 
@@ -13,8 +12,8 @@ class MailerService {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'rigonzalez@udv.edu.gt',
-        pass: 'R1g@42569795'
+        user: '',
+        pass: ''
       }
     });
 
