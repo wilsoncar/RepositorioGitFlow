@@ -12,8 +12,8 @@ class MailerService {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: '',
-        pass: ''
+        user: 'dogs.project.management@gmail.com',
+        pass: 'Dogs@!29042021'
       }
     });
 

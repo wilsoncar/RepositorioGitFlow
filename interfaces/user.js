@@ -1,4 +1,5 @@
 const User = {
+    _id: String,
     name: String,
     lastname: String,
     mail: String,
