@@ -7,6 +7,7 @@ function userApi(app) {
     app.use("/api/activate-user", router);
 
     const userService = new UserService();
+    console.log();
 
     router.put("/", async function (req, res, next) {
         const { body: user } = req;
