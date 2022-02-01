@@ -20,7 +20,7 @@ function userApi(app) {
                     const updateUsr = await userService.updateUser(usr, usr._id);
                     res.status(200).json({
                         data: updateUsr,
-                        message: 'user selected'
+                        message: 'user selected successfully'
                     });
                 }
             }
