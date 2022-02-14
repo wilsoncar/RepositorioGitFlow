@@ -7,21 +7,21 @@ function userApi(app) {
     app.use("/api/activate-user", router);
 
     const userService = new UserService();
-    console.log();
-    console.log();
+    console.log('arreglado');
 
     router.put("/", async function (req, res, next) {
         const { body: user } = req;
         try {
             const usr = await userService.getUser(user.id);
-            console.log();
+            console.log('arreglado');
             if (usr) {
                 const decoded = jwt.decode(usr.token, 'dog');
                 if (decoded.exp && decoded.sub === user.tk) {
                     usr.status = true;
-                    console.log();
-                    console.log();
+                    console.log('arreglado');
+                    console.log('arreglado');
                     const updateUsr = await userService.updateUser(usr, usr._id);
+                    console.log('arreglado');
                     res.status(200).json({
                         data: updateUsr,
                         example: updateUsr,
